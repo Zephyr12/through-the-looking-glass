@@ -13,6 +13,6 @@ When you press the key on a key board a *Membrane* under the key is compressed. 
 
 
 ### Visual Output
-
+Your monitor and graphics cards are periferals just like the keyboard and mouse: but unlike the keyboard and mouse, which uses interrupts the graphics card uses  something called mapped memory. This means that for example setting the value of the 2051501st memory could be the start of the screen buffer, an area of memory that contains the colours of the screen pixels. 
 
 ### A Cat Photo
