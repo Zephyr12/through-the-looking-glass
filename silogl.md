@@ -16,3 +16,27 @@ When you press the key on a key board a *Membrane* under the key is compressed. 
 Your *monitor* and *graphics cards* are *periferals* just like the keyboard and mouse: but unlike the keyboard and mouse, which use interrupts the graphics card use something called mapped memory. This means that for example setting the value of the 753664th memory could be the start of the screen buffer, an area of memory that contains the colours of the screen pixels. So to display an image a program would have to load the image into RAM from whatever source it needed, set the mode of the display to tell it to render graphics and not text and then display it into the *buffer* that the graphics card expects. As well as this if the program needs complex image manipulations it could send commands from a standard like OpenGL or Direct3D which provide high-level interfaces to the graphics hardware. The graphics card converts this data into digital (or analogue depending on age and connection type) signals that the monitor can understand. The monitor, which is essentially a backlight covered by color and polarising filters, then blocks out light by using a filter polarised at 90 degrees to the constant filter at the sub-pixel level. See [Fig 1] for a visual representation.
 
 ### A Cat Photo
+
+So now we have the three of the four main aspects of modern computing: input, processing and output. The final one, abstraction is one of the harder ones to describe due to its abstract nature. So lets tackle it with something simple, a cat photo. When you click on a button you are interacting with the *application layer*, this layer deals with the *protocols and interfaces* used by the sender and reciever, in this case you are **usually** using *http* a protocol for sending documents over the internet in the form of *requests* and *responses*. The request looks something like `GET www.mycoolsite.tldshavegonetoofar/imgs/cat.gif HTTP/1.1`, breaking this down the `GET` portion means that the request one that retrives data, there are others like PUT, DELETE and TRACE but for now get will do; the 
+`www.mycoolsite.tldshavegonetoofar/imgs/cat.gif` tells the reciever, in this instance known as a *server* that the thing we want is stored at the location `/imgs/cat.gif` on the web server at `mycoolsite.tldshavegonetoofar`. 
+
+- You click on a button
+- Application sends HTTP request to netcard
+- Netcard sends the data + protocol info to router
+- router splits up the data into packets and adds source and dest ports
+- adds source and dest ip and sends it across the network
+- physical layer adds frame header and footer
+
+#### Routing
+
+- each router checks if it is the dest and if it knows the dest
+- if not sends it to everyone
+- complex routing algos
+- W-shaped routing
+
+#### Back on topic
+
+- server looks up
+- forms response
+- sends response
+- same routing on the way back
